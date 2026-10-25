@@ -1,8 +1,8 @@
-// Complete the function using object destructuring.
 
 function getStudentDetails(students) {
-    const { name, age, grade } = students;
-    return `Name: ${name}, Age: ${age}, Grade: ${grade}`;
+    return students.map(({ name, age, grade }) => {
+        return `${name} ${age} ${grade}`;
+    });
 }
 
 module.exports = getStudentDetails;
